@@ -1,0 +1,40 @@
+{
+  "name": "unip1n-at-home",
+  "version": "1.0.0",
+  "description": "Playground RESTful api project for imitating unipin application",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.cjs",
+    "swagger": "node src/swagger.cjs"
+  },
+  "keywords": [
+    "Node.js",
+    "Express.js",
+    "RESTful",
+    "api"
+  ],
+  "author": "Felix Andersen",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.1",
+    "express-validator": "^7.0.1",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "pg-promise": "^11.5.5",
+    "swagger-ui-express": "^5.0.0",
+    "uuid": "^9.0.1",
+    "validator": "^13.11.0",
+    "winston": "^3.12.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "imports": {
+    "#root/*.cjs": "./*.cjs"
+  }
+}

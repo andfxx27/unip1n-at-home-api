@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "67f9b227-ef9e-4484-9da2-04fe49fe3aaa",
+		"name": "1_unip1n-at-home",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7077604",
+		"_collection_link": "https://restless-water-143896.postman.co/workspace/Personal-Projects~949ddf3a-936e-49e3-bb73-8f8a696d7260/collection/7077604-67f9b227-ef9e-4484-9da2-04fe49fe3aaa?action=share&source=collection_link&creator=7077604"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/andfx/Pictures/cat-1.jpg"
+								},
+								{
+									"key": "username",
+									"value": "narutowillbehokage",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "Naruto",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Uzumaki",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "naruto.uzumaki@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "+6281293872488",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678aA*",
+									"type": "text"
+								},
+								{
+									"key": "dateOfBirth",
+									"value": "2000-05-12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users/sign-up",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identifier\": \"naruto.uzumaki@gmail.com\",\r\n    \"password\": \"12345678aA*\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users/sign-in",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Game",
+			"item": [
+				{
+					"name": "Get Game List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/games?page=1&limit=5",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"games"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Game Voucher List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/games/7ed48255-a817-4689-81b6-3a87d55774aa/vouchers?page=2&limit=5",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"games",
+								"7ed48255-a817-4689-81b6-3a87d55774aa",
+								"vouchers"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"idea.andersen@gmail.com\",\r\n    \"inGameUuid\": \"820003000\",\r\n    \"gameVoucherId\": \"79c476c9-8d45-4e09-803a-2a4f914bf95f\",\r\n    \"paymentMethod\": \"OVO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/orders",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5MTc1YWJmOC02MGMxLTQ1ZGQtYjYzMy00ZmE2OTljMDhiMjQiLCJ1c2VybmFtZSI6ImlvNXRyZWFtIiwiaWF0IjoxNzExNzk4OTIzLCJleHAiOjE3MTE4ODUzMjMsImlzcyI6InVuaXAxbi1hdC1ob21lIn0._8qmdDGviCjRCyhe5zilvfNRXsG9vob-DvvBBVyn9vc",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}

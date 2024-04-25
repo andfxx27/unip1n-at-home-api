@@ -1,0 +1,16 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "unip1n-at-home API",
+    "description": "RESTful API for unip1n-at-home application.",
+    "contact": {
+      "name": "API Support",
+      "email": "idea.andersen@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "0.0.1"
+  }
+}
